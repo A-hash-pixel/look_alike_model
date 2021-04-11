@@ -4,3 +4,4 @@ sklearn
 openpyxl
 flask
 Flask-Reuploaded
+gunicorn
