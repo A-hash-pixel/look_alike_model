@@ -1,18 +1,11 @@
 import os #provides functions for interacting with the operating system
 import numpy as np 
 import pandas as pd
-import pickle
 import warnings
 warnings.filterwarnings("ignore")
 
-from pywebio.input import *
-from pywebio.output import *
-from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-from sklearn import tree
-from sklearn.tree import DecisionTreeClassifier, export_graphviz
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, r2_score
 import logging
 from utils import get_time
 
@@ -43,7 +36,7 @@ def predict(input_csv):
         output = df2.copy()
         output['likely_customer'] = result
         if not output.empty:
-            output_filename = './data/b2b_output_{}.xlsx'.format(get_time())
+            output_filename = './data/b2b_output.xlsx'
             output.to_excel(output_filename)
             os.remove(input_csv)
             return output_filename
