@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib==3.2
+seaborn
+pywebio
+sklearn
+graphviz
+openpyxl
+flask
+Flask-Reuploaded
